@@ -2,9 +2,8 @@ const csvconverter = require('csvtojson')
 const csvFilePath = './customer-data.csv'
 const fs = require('fs')
 
-console.log(csvFilePath)
-
 let i = 0
+
 const destinationFile = fs.createWriteStream('customer-data.json')
 
 destinationFile.write('[')
