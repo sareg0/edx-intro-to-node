@@ -12,7 +12,7 @@ csvconverter()
   .fromFile(csvFilePath)
   .on('json', (jsonObj) => {
     const prefix = i == 0 ? '' : ',\n'
-    destinationFile.write(prefix + JSON.stringify(jsonObj))
+    destinationFile.write(prefix + JSON.stringify(jsonObj, null, 2))
     i++
   })
   .on('end', () => {
